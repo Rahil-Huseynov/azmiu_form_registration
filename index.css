@@ -1,40 +1,46 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* Kendi tənzimləmələrini korumaq üçün */
 }
-.form_container{
-    background:linear-gradient(45deg, rgba(37, 45, 38, 0.7), rgba(36, 39, 57, 0.7)), url(apply-img-scaled.jpg);
-    background-position: center;
-    background-size: cover;
-    background-clip: border-box;
-    height: 100vh;
-    display: grid;
-    place-items: center;
-    gap: 2rem;
-}
-.container_flex_components{
-    display: flex;
-    gap: 1rem;
-    width: 100%;
-}
-.form_item{
-    display: grid;
-    color: white;
-    gap: 2rem;
-    width: 400px;
-}
-.input_form{
-    height: 30px;
-    padding-left: 5px;
 
-    width:  calc(100% - 7px);
+.form_container {
+  background: linear-gradient(45deg, rgba(37, 45, 38, 0.7), rgba(36, 39, 57, 0.7)), url(./assets/apply-img-scaled.jpg);
+  background-position: center;
+  background-size: cover;
+  background-clip: border-box;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  gap: 2rem;
 }
-.container_grid_components{
-    display: grid;
-    align-items: center;
-    gap: 5px;
-    width: 100%;
+
+.container_flex_components {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
 }
+
+.form_item {
+  display: grid;
+  color: white;
+  gap: 2rem;
+  width: 400px;
+}
+
+.input_form {
+  height: 30px;
+  padding-left: 5px;
+  width: calc(100% - 7px);
+}
+
+.container_grid_components {
+  display: grid;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
 .button-36 {
   background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
   border-radius: 8px;
@@ -43,7 +49,7 @@
   color: #FFFFFF;
   cursor: pointer;
   flex-shrink: 0;
-  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-family: "Inter UI", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
   font-weight: 500;
   height: 4rem;
@@ -64,5 +70,56 @@
 @media (min-width: 768px) {
   .button-36 {
     padding: 0 2.6rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .form_container {
+    background: linear-gradient(45deg, rgba(37, 45, 38, 0.7), rgba(36, 39, 57, 0.7)), url(./assets/apply-img-scaled.jpg);
+    background-position: center;
+    background-size: cover;
+    background-clip: border-box;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .container_flex_components {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .form_item {
+    display: grid;
+    color: white;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .input_form {
+    height: 30px;
+    padding-left: 5px;
+    width: 100%;
+  }
+
+  .container_grid_components {
+    display: grid;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+  }
+
+  .button-36 {
+    font-size: 14px;
+    height: 3rem;
+    padding: 0 1rem;
   }
 }
