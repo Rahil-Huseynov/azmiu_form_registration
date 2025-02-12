@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; /* Kendi tənzimləmələrini korumaq üçün */
+  box-sizing: border-box; 
 }
 
 .form_container {
@@ -37,7 +37,6 @@
 .container_grid_components {
   display: grid;
   align-items: center;
-  gap: 5px;
   width: 100%;
 }
 
@@ -60,6 +59,16 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+}
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  position: absolute;
+  left: 0;
+}
+
+.container_grid_components {
+  position: relative; 
 }
 
 .button-36:hover {
